@@ -1,0 +1,136 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [],
+    "resources": [
+            {
+                "description": "Colors",
+                "colors": {
+                    "gris": "#4d565e",
+                    "blanc": "#ffffff"
+                }
+            }        
+        ],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Pager",
+                "navigation": "none",
+                "id": "DirectePager",
+                "width": "100vw",
+                "height": "100vh",
+                "onPageChanged": [{
+                    "type": "SendEvent",
+                    "arguments": [
+                        "${event.source.value}",
+                        "play"
+                    ]
+                }],                
+                "items": [
+                    {
+                        "type": "Frame",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "source": "${payload.programa.properties.fons_catradio_roundhub}",
+                                "scale": "best-fit",
+                                "width": "100vw",
+                                "height": "100vh"
+                            }
+                        ]
+                    },
+                    {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "Frame",
+                            "width": "100vw",
+                            "height": "100vh",
+                            "backgroundColor": "@blanc"
+                        },{
+                            "type": "Container",
+                            "width": "100vw",
+                            "height": "100vh",
+                            "position": "absolute",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "source": "${payload.programa.properties.icona_groga}",
+                                    "scale": "best-fit",
+                                    "width": "20vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "top": "6vh",
+                                    "left": "38vw"
+                                }
+                            ]
+                        },{
+                            "type": "Container",
+                            "width": "100vw",
+                            "height": "100vh",
+                            "position": "absolute",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "source": "${payload.programa.properties.url_presentador}",
+                                    "scale": "best-fit",
+                                    "width": "75vw",
+                                    "height": "75vh",
+                                    "position": "absolute",
+                                    "top": "25vh",
+                                    "left": "-15vw"
+                                }
+                            ]
+                        },{
+                            "type": "Container",
+                            "width": "45vw",
+                            "height": "75vh",
+                            "left": "50vw",
+                            "top": "30vh",
+                            "position": "absolute",                            
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "id": "programa",
+                                    "text": "${payload.programa.properties.nom_programa}",
+                                    "fontWeight": "bold",
+                                    "fontSize": "9vh",
+                                    "color": "@gris",
+                                    "maxLines": 3,
+                                    "textAlign": "left",
+                                    "lineHeight": "1.1"
+                                },{
+                                    "type": "Text",
+                                    "id": "presentador",
+                                    "paddingTop": "10",
+                                    "text": "${payload.programa.properties.nom_presentador}",
+                                    "fontWeight": "normal",
+                                    "fontSize": "6vh",
+                                    "color": "@gris",
+                                    "maxLines": 2,
+                                    "textAlign": "left",
+                                    "lineHeight": "1.1"
+                                },{
+                                    "type": "Image",
+                                    "source": "${payload.programa.properties.icona_voomer}",
+                                    "width": "18vw",
+                                    "height": "10vh",
+                                    "paddingLeft": "5"
+                                }
+                            ]
+                        }
+                    ]
+                    }
+                ]
+            }
+        ]
+    }
+}

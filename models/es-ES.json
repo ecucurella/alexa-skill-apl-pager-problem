@@ -1,0 +1,35 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "pagina bien",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "PruebaIntent",
+          "slots": [],
+          "samples": [
+            "Prueba",
+            "Hola"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "3"
+}

@@ -1,0 +1,13 @@
+{
+    "programa": {
+        "type": "object",
+        "properties": {
+            "fons_catradio_roundhub": "https://statics.ccma.cat/multimedia/png/6/9/1559638938696.png",
+            "icona_groga": "https://statics.ccma.cat/multimedia/png/5/8/1568284227085.png",
+            "icona_voomer": "https://statics.ccma.cat/multimedia/png/2/6/1568284625062.png",
+            "url_presentador": "https://statics.ccma.cat/multimedia/png/6/0/1567266587106.png",
+            "nom_programa": "Tot Costa",
+            "nom_presentador": "Amb Jordi Costa i Sònia Gelmà"
+        }
+    }
+}
