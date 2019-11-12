@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "pagina bien",
+      "invocationName": "página bien",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
